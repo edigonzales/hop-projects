@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pipeline>
+  <info>
+    <name>reader</name>
+    <name_sync_with_filename>Y</name_sync_with_filename>
+    <description/>
+    <extended_description/>
+    <pipeline_version/>
+    <pipeline_type>Normal</pipeline_type>
+    <parameters>
+    </parameters>
+    <capture_transform_performance>N</capture_transform_performance>
+    <transform_performance_capturing_delay>1000</transform_performance_capturing_delay>
+    <transform_performance_capturing_size_limit>100</transform_performance_capturing_size_limit>
+    <created_user>-</created_user>
+    <created_date>2026/03/06 16:09:24.756</created_date>
+    <modified_user>-</modified_user>
+    <modified_date>2026/03/06 16:09:24.756</modified_date>
+  </info>
+  <notepads>
+  </notepads>
+  <order>
+    <hop>
+      <from>OGR Input</from>
+      <to>OGR Output - GeoJSON</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>OGR Input</from>
+      <to>OGR Output - CSV</to>
+      <enabled>Y</enabled>
+    </hop>
+  </order>
+  <transform>
+    <name>OGR Input</name>
+    <type>OGR_INPUT_TRANSFORM</type>
+    <description/>
+    <distribute>N</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <fidFieldName>fid</fidFieldName>
+    <fileName>/Users/stefan/Downloads/2549.ch.so.agi.av.mopublic.gpkg</fileName>
+    <geometryFieldName>geometry</geometryFieldName>
+    <includeFid>Y</includeFid>
+    <layerName>grundstueck</layerName>
+    <attributes/>
+    <GUI>
+      <xloc>144</xloc>
+      <yloc>160</yloc>
+    </GUI>
+  </transform>
+  <transform>
+    <name>OGR Output - GeoJSON</name>
+    <type>OGR_OUTPUT_TRANSFORM</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <datasetCreationOptions/>
+    <fileName>/Users/stefan/tmp/foo.geojson</fileName>
+    <forceGeometryType>AUTO</forceGeometryType>
+    <format>GeoJSON</format>
+    <geometryField>geometry</geometryField>
+    <layerCreationOptions/>
+    <layerName/>
+    <selectedAttributes/>
+    <writeMode>OVERWRITE</writeMode>
+    <attributes/>
+    <GUI>
+      <xloc>448</xloc>
+      <yloc>160</yloc>
+    </GUI>
+  </transform>
+  <transform>
+    <name>OGR Output - CSV</name>
+    <type>OGR_OUTPUT_TRANSFORM</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <datasetCreationOptions/>
+    <fileName>/Users/stefan/tmp/foo.csv</fileName>
+    <forceGeometryType>AUTO</forceGeometryType>
+    <format>CSV</format>
+    <geometryField>geometry</geometryField>
+    <layerCreationOptions/>
+    <layerName/>
+    <selectedAttributes/>
+    <writeMode>OVERWRITE</writeMode>
+    <attributes/>
+    <GUI>
+      <xloc>352</xloc>
+      <yloc>352</yloc>
+    </GUI>
+  </transform>
+  <transform_error_handling>
+  </transform_error_handling>
+  <attributes/>
+</pipeline>
