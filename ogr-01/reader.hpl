@@ -30,7 +30,40 @@
       <to>OGR Output - CSV</to>
       <enabled>Y</enabled>
     </hop>
+    <hop>
+      <from>OGR Input</from>
+      <to>Geometry Operation</to>
+      <enabled>Y</enabled>
+    </hop>
   </order>
+  <transform>
+    <name>Geometry Operation</name>
+    <type>GEOMETRY_OPERATION_TRANSFORM</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <bufferCapStyle>ROUND</bufferCapStyle>
+    <bufferJoinStyle>ROUND</bufferJoinStyle>
+    <bufferSegments>8</bufferSegments>
+    <bufferSingleSided>N</bufferSingleSided>
+    <distanceMode>STATIC</distanceMode>
+    <distanceValue>10</distanceValue>
+    <operationId>interior_point</operationId>
+    <outputFieldName>geometry_result</outputFieldName>
+    <outputMode>APPEND</outputMode>
+    <primaryGeometryFieldName>geometry</primaryGeometryFieldName>
+    <secondaryGeometryFieldName>geometry</secondaryGeometryFieldName>
+    <attributes/>
+    <GUI>
+      <xloc>128</xloc>
+      <yloc>448</yloc>
+    </GUI>
+  </transform>
   <transform>
     <name>OGR Input</name>
     <type>OGR_INPUT_TRANSFORM</type>
@@ -54,32 +87,6 @@
     </GUI>
   </transform>
   <transform>
-    <name>OGR Output - GeoJSON</name>
-    <type>OGR_OUTPUT_TRANSFORM</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <datasetCreationOptions/>
-    <fileName>/Users/stefan/tmp/foo.geojson</fileName>
-    <forceGeometryType>AUTO</forceGeometryType>
-    <format>GeoJSON</format>
-    <geometryField>geometry</geometryField>
-    <layerCreationOptions/>
-    <layerName/>
-    <selectedAttributes/>
-    <writeMode>OVERWRITE</writeMode>
-    <attributes/>
-    <GUI>
-      <xloc>448</xloc>
-      <yloc>160</yloc>
-    </GUI>
-  </transform>
-  <transform>
     <name>OGR Output - CSV</name>
     <type>OGR_OUTPUT_TRANSFORM</type>
     <description/>
@@ -90,19 +97,37 @@
       <method>none</method>
       <schema_name/>
     </partitioning>
-    <datasetCreationOptions/>
     <fileName>/Users/stefan/tmp/foo.csv</fileName>
     <forceGeometryType>AUTO</forceGeometryType>
     <format>CSV</format>
     <geometryField>geometry</geometryField>
-    <layerCreationOptions/>
-    <layerName/>
-    <selectedAttributes/>
     <writeMode>OVERWRITE</writeMode>
     <attributes/>
     <GUI>
       <xloc>352</xloc>
       <yloc>352</yloc>
+    </GUI>
+  </transform>
+  <transform>
+    <name>OGR Output - GeoJSON</name>
+    <type>OGR_OUTPUT_TRANSFORM</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <fileName>/Users/stefan/tmp/foo.geojson</fileName>
+    <forceGeometryType>AUTO</forceGeometryType>
+    <format>GeoJSON</format>
+    <geometryField>geometry</geometryField>
+    <writeMode>OVERWRITE</writeMode>
+    <attributes/>
+    <GUI>
+      <xloc>448</xloc>
+      <yloc>160</yloc>
     </GUI>
   </transform>
   <transform_error_handling>
