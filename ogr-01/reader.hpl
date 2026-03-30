@@ -43,10 +43,10 @@
       <schema_name/>
     </partitioning>
     <fidFieldName>fid</fidFieldName>
-    <fileName>/Users/stefan/Downloads/2549.ch.so.agi.av.mopublic.gpkg</fileName>
+    <fileName>/Users/stefan/tmp/gpkg/2402.gpkg</fileName>
     <geometryFieldName>geometry</geometryFieldName>
     <includeFid>Y</includeFid>
-    <layerName>grundstueck</layerName>
+    <layerName>nutzungsplanung_empfindlichkeitsstufe</layerName>
     <attributes/>
     <GUI>
       <xloc>144</xloc>

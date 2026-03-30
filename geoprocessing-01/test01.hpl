@@ -32,8 +32,8 @@
     </hop>
   </order>
   <transform>
-    <name>OGR Input</name>
-    <type>OGR_INPUT_TRANSFORM</type>
+    <name>Buffer_50</name>
+    <type>GEOMETRY_OPERATION_TRANSFORM</type>
     <description/>
     <distribute>Y</distribute>
     <custom_distribution/>
@@ -42,21 +42,22 @@
       <method>none</method>
       <schema_name/>
     </partitioning>
-    <attributeFilter/>
-    <bbox/>
-    <featureLimit/>
-    <fidFieldName>fid</fidFieldName>
-    <fileName>/Users/stefan/tmp/gpkg/2402.gpkg</fileName>
-    <geometryFieldName>geometry</geometryFieldName>
-    <includeFid>Y</includeFid>
-    <layerName>nutzungsplanung_empfindlichkeitsstufe</layerName>
-    <openOptions/>
-    <polygonWkt/>
-    <selectedAttributes/>
+    <bufferCapStyle>ROUND</bufferCapStyle>
+    <bufferJoinStyle>ROUND</bufferJoinStyle>
+    <bufferSegments>8</bufferSegments>
+    <bufferSingleSided>N</bufferSingleSided>
+    <distanceMode>STATIC</distanceMode>
+    <distanceValue>20</distanceValue>
+    <operationId>buffer</operationId>
+    <outputFieldName>geometry_result_buffer</outputFieldName>
+    <outputMode>REPLACE</outputMode>
+    <overlayMode>STANDARD</overlayMode>
+    <primaryGeometryFieldName>geometry_result</primaryGeometryFieldName>
+    <secondaryGeometryFieldName>geometry</secondaryGeometryFieldName>
     <attributes/>
     <GUI>
-      <xloc>96</xloc>
-      <yloc>112</yloc>
+      <xloc>416</xloc>
+      <yloc>352</yloc>
     </GUI>
   </transform>
   <transform>
@@ -74,14 +75,12 @@
     <bufferJoinStyle>ROUND</bufferJoinStyle>
     <bufferSegments>8</bufferSegments>
     <bufferSingleSided>N</bufferSingleSided>
-    <distanceFieldName/>
     <distanceMode>STATIC</distanceMode>
     <distanceValue>1.0</distanceValue>
     <operationId>interior_point</operationId>
     <outputFieldName>geometry_result</outputFieldName>
     <outputMode>APPEND</outputMode>
     <overlayMode>STANDARD</overlayMode>
-    <precisionScale/>
     <primaryGeometryFieldName>geometry</primaryGeometryFieldName>
     <secondaryGeometryFieldName>geometry</secondaryGeometryFieldName>
     <attributes/>
@@ -91,8 +90,8 @@
     </GUI>
   </transform>
   <transform>
-    <name>Buffer_50</name>
-    <type>GEOMETRY_OPERATION_TRANSFORM</type>
+    <name>OGR Input</name>
+    <type>OGR_INPUT_TRANSFORM</type>
     <description/>
     <distribute>Y</distribute>
     <custom_distribution/>
@@ -101,24 +100,15 @@
       <method>none</method>
       <schema_name/>
     </partitioning>
-    <bufferCapStyle>ROUND</bufferCapStyle>
-    <bufferJoinStyle>ROUND</bufferJoinStyle>
-    <bufferSegments>8</bufferSegments>
-    <bufferSingleSided>N</bufferSingleSided>
-    <distanceFieldName/>
-    <distanceMode>STATIC</distanceMode>
-    <distanceValue>20</distanceValue>
-    <operationId>buffer</operationId>
-    <outputFieldName>geometry_result_buffer</outputFieldName>
-    <outputMode>REPLACE</outputMode>
-    <overlayMode>STANDARD</overlayMode>
-    <precisionScale/>
-    <primaryGeometryFieldName>geometry_result</primaryGeometryFieldName>
-    <secondaryGeometryFieldName>geometry</secondaryGeometryFieldName>
+    <fidFieldName>fid</fidFieldName>
+    <fileName>/Users/stefan/tmp/gpkg/2402.gpkg</fileName>
+    <geometryFieldName>geometry</geometryFieldName>
+    <includeFid>Y</includeFid>
+    <layerName>nutzungsplanung_grundnutzung</layerName>
     <attributes/>
     <GUI>
-      <xloc>416</xloc>
-      <yloc>352</yloc>
+      <xloc>96</xloc>
+      <yloc>112</yloc>
     </GUI>
   </transform>
   <transform_error_handling>
