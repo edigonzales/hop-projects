@@ -139,6 +139,28 @@ BBOX = 2607637,1228726,2607884,1228906</note>
     </GUI>
   </transform>
   <transform>
+    <name>OGR Output</name>
+    <type>OGR_OUTPUT_TRANSFORM</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <fileName>/Users/stefan/tmp/gebaeude_mit_hoehen.gpkg</fileName>
+    <forceGeometryType>AUTO</forceGeometryType>
+    <format>GPKG</format>
+    <geometryField>geometry</geometryField>
+    <writeMode>OVERWRITE</writeMode>
+    <attributes/>
+    <GUI>
+      <xloc>304</xloc>
+      <yloc>640</yloc>
+    </GUI>
+  </transform>
+  <transform>
     <name>Raster Clip</name>
     <type>GDAL_RASTER_CLIP_TRANSFORM</type>
     <description/>
@@ -184,40 +206,23 @@ BBOX = 2607637,1228726,2607884,1228906</note>
       <schema_name/>
     </partitioning>
     <addResultFields>Y</addResultFields>
-    <additionalArgs/>
-    <authPassword/>
     <authType>NONE</authType>
-    <authUsername/>
-    <bands/>
-    <bearerToken/>
-    <creationOptions/>
-    <customHeaderName/>
-    <customHeaderValue/>
     <failOnError>Y</failOnError>
-    <gdalConfigOptions/>
     <geometryField>geometry</geometryField>
-    <includeFields/>
     <inputField>gdal_output</inputField>
     <inputSourceMode>LOCAL_FILE</inputSourceMode>
-    <inputValue/>
     <inputValueMode>FIELD</inputValueMode>
-    <layerCreationOptions/>
-    <outputField/>
     <outputFormat>GPKG</outputFormat>
     <outputLayer>stats</outputLayer>
     <outputMode>ROW_FIELDS</outputMode>
     <outputSourceMode>LOCAL_FILE</outputSourceMode>
-    <outputValue/>
     <outputValueMode>CONSTANT</outputValueMode>
     <outputWriteMode>FAIL_IF_EXISTS</outputWriteMode>
     <pixelInclusion>default</pixelInclusion>
     <stats>mean,max</stats>
     <strategy>feature</strategy>
-    <zonesField/>
     <zonesInputMode>HOP_GEOMETRY_FIELD</zonesInputMode>
-    <zonesLayer/>
     <zonesSourceMode>LOCAL_FILE</zonesSourceMode>
-    <zonesValue/>
     <zonesValueMode>CONSTANT</zonesValueMode>
     <attributes/>
     <GUI>
@@ -265,85 +270,71 @@ BBOX = 2607637,1228726,2607884,1228906</note>
         <length>-2</length>
         <name>fid</name>
         <precision>-2</precision>
-        <rename/>
       </field>
       <field>
         <length>-2</length>
         <name>T_Ili_Tid</name>
         <precision>-2</precision>
-        <rename/>
       </field>
       <field>
         <length>-2</length>
         <name>art_txt</name>
         <precision>-2</precision>
-        <rename/>
       </field>
       <field>
         <length>-2</length>
         <name>bfs_nr</name>
         <precision>-2</precision>
-        <rename/>
       </field>
       <field>
         <length>-2</length>
         <name>egid</name>
         <precision>-2</precision>
-        <rename/>
       </field>
       <field>
         <length>-2</length>
         <name>importdatum</name>
         <precision>-2</precision>
-        <rename/>
       </field>
       <field>
         <length>-2</length>
         <name>nachfuehrung</name>
         <precision>-2</precision>
-        <rename/>
       </field>
       <field>
         <length>-2</length>
         <name>geometry</name>
         <precision>-2</precision>
-        <rename/>
       </field>
       <field>
         <length>-2</length>
         <name>gdal_upstream_success</name>
         <precision>-2</precision>
-        <rename/>
       </field>
       <field>
         <length>-2</length>
         <name>gdal_upstream_message</name>
         <precision>-2</precision>
-        <rename/>
       </field>
       <field>
         <length>-2</length>
         <name>gdal_upstream_elapsed_ms</name>
         <precision>-2</precision>
-        <rename/>
       </field>
       <field>
         <length>-2</length>
         <name>gdal_upstream_input</name>
         <precision>-2</precision>
-        <rename/>
       </field>
       <field>
         <length>-2</length>
         <name>gdal_upstream_output</name>
         <precision>-2</precision>
-        <rename/>
       </field>
       <field>
         <length>-2</length>
         <name>gdal_upstream_details_json</name>
         <precision>-2</precision>
-        <rename/>
       </field>
       <field>
         <length>-2</length>
@@ -361,37 +352,31 @@ BBOX = 2607637,1228726,2607884,1228906</note>
         <length>-2</length>
         <name>gdal_zs_success</name>
         <precision>-2</precision>
-        <rename/>
       </field>
       <field>
         <length>-2</length>
         <name>gdal_zs_message</name>
         <precision>-2</precision>
-        <rename/>
       </field>
       <field>
         <length>-2</length>
         <name>gdal_zs_elapsed_ms</name>
         <precision>-2</precision>
-        <rename/>
       </field>
       <field>
         <length>-2</length>
         <name>gdal_zs_input</name>
         <precision>-2</precision>
-        <rename/>
       </field>
       <field>
         <length>-2</length>
         <name>gdal_zs_output</name>
         <precision>-2</precision>
-        <rename/>
       </field>
       <field>
         <length>-2</length>
         <name>gdal_zs_details_json</name>
         <precision>-2</precision>
-        <rename/>
       </field>
       <remove>
         <name>gdal_upstream_success</name>
@@ -435,32 +420,6 @@ BBOX = 2607637,1228726,2607884,1228906</note>
     <GUI>
       <xloc>304</xloc>
       <yloc>512</yloc>
-    </GUI>
-  </transform>
-  <transform>
-    <name>OGR Output</name>
-    <type>OGR_OUTPUT_TRANSFORM</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <datasetCreationOptions/>
-    <fileName>/Users/stefan/tmp/gebaeude_mit_hoehen.gpkg</fileName>
-    <forceGeometryType>AUTO</forceGeometryType>
-    <format>GPKG</format>
-    <geometryField>geometry</geometryField>
-    <layerCreationOptions/>
-    <layerName/>
-    <selectedAttributes/>
-    <writeMode>OVERWRITE</writeMode>
-    <attributes/>
-    <GUI>
-      <xloc>304</xloc>
-      <yloc>640</yloc>
     </GUI>
   </transform>
   <transform_error_handling>
